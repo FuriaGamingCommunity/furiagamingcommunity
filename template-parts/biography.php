@@ -12,7 +12,7 @@
 	<div class="author-avatar">
 		<?php
 		/**
-		 * Filter the Furia Gaming Community author bio avatar size.
+		 * Filter the Twenty Sixteen author bio avatar size.
 		 *
 		 * @since Furia Gaming Community 1.0
 		 *

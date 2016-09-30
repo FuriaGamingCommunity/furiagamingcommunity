@@ -1,6 +1,6 @@
 <?php
 /**
- * Furia Gaming Community Customizer functionality
+ * Twenty Sixteen Customizer functionality
  *
  * @package WordPress
  * @subpackage Furia_Gaming_Community
@@ -20,7 +20,7 @@ function furiagamingcommunity_custom_header_and_background() {
 	$default_text_color       = trim( $color_scheme[3], '#' );
 
 	/**
-	 * Filter the arguments used when adding 'custom-background' support in Furia Gaming Community.
+	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
 	 *
 	 * @since Furia Gaming Community 1.0
 	 *
@@ -35,7 +35,7 @@ function furiagamingcommunity_custom_header_and_background() {
 	) ) );
 
 	/**
-	 * Filter the arguments used when adding 'custom-header' support in Furia Gaming Community.
+	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
 	 *
 	 * @since Furia Gaming Community 1.0
 	 *
@@ -106,6 +106,19 @@ function furiagamingcommunity_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback' => 'furiagamingcommunity_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+			'container_inclusive' => false,
+			'render_callback' => 'furiagamingcommunity_customize_partial_blogdescription',
+		) );
+	}
+
 	// Add color scheme setting and control.
 	$wp_customize->add_setting( 'color_scheme', array(
 		'default'           => 'default',
@@ -175,7 +188,31 @@ function furiagamingcommunity_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'furiagamingcommunity_customize_register', 11 );
 
 /**
- * Registers color schemes for Furia Gaming Community.
+ * Render the site title for the selective refresh partial.
+ *
+ * @since Twenty Sixteen 1.2
+ * @see furiagamingcommunity_customize_register()
+ *
+ * @return void
+ */
+function furiagamingcommunity_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @since Twenty Sixteen 1.2
+ * @see furiagamingcommunity_customize_register()
+ *
+ * @return void
+ */
+function furiagamingcommunity_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+/**
+ * Registers color schemes for Twenty Sixteen.
  *
  * Can be filtered with {@see 'furiagamingcommunity_color_schemes'}.
  *
@@ -192,7 +229,7 @@ add_action( 'customize_register', 'furiagamingcommunity_customize_register', 11 
  */
 function furiagamingcommunity_get_color_schemes() {
 	/**
-	 * Filter the color schemes registered for use with Furia Gaming Community.
+	 * Filter the color schemes registered for use with Twenty Sixteen.
 	 *
 	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
@@ -267,7 +304,7 @@ function furiagamingcommunity_get_color_schemes() {
 
 if ( ! function_exists( 'furiagamingcommunity_get_color_scheme' ) ) :
 /**
- * Retrieves the current Furia Gaming Community color scheme.
+ * Retrieves the current Twenty Sixteen color scheme.
  *
  * Create your own furiagamingcommunity_get_color_scheme() function to override in a child theme.
  *
@@ -289,7 +326,7 @@ endif; // furiagamingcommunity_get_color_scheme
 
 if ( ! function_exists( 'furiagamingcommunity_get_color_scheme_choices' ) ) :
 /**
- * Retrieves an array of color scheme choices registered for Furia Gaming Community.
+ * Retrieves an array of color scheme choices registered for Twenty Sixteen.
  *
  * Create your own furiagamingcommunity_get_color_scheme_choices() function to override
  * in a child theme.
@@ -313,7 +350,7 @@ endif; // furiagamingcommunity_get_color_scheme_choices
 
 if ( ! function_exists( 'furiagamingcommunity_sanitize_color_scheme' ) ) :
 /**
- * Handles sanitization for Furia Gaming Community color schemes.
+ * Handles sanitization for Twenty Sixteen color schemes.
  *
  * Create your own furiagamingcommunity_sanitize_color_scheme() function to override
  * in a child theme.
@@ -384,7 +421,7 @@ add_action( 'wp_enqueue_scripts', 'furiagamingcommunity_color_scheme_css' );
  * @since Furia Gaming Community 1.0
  */
 function furiagamingcommunity_customize_control_js() {
-	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20150926', true );
+	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160816', true );
 	wp_localize_script( 'color-scheme-control', 'colorScheme', furiagamingcommunity_get_color_schemes() );
 }
 add_action( 'customize_controls_enqueue_scripts', 'furiagamingcommunity_customize_control_js' );
@@ -395,7 +432,7 @@ add_action( 'customize_controls_enqueue_scripts', 'furiagamingcommunity_customiz
  * @since Furia Gaming Community 1.0
  */
 function furiagamingcommunity_customize_preview_js() {
-	wp_enqueue_script( 'furiagamingcommunity-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20150922', true );
+	wp_enqueue_script( 'furiagamingcommunity-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20160816', true );
 }
 add_action( 'customize_preview_init', 'furiagamingcommunity_customize_preview_js' );
 
@@ -517,11 +554,18 @@ function furiagamingcommunity_get_color_scheme_css( $colors ) {
 		background-color: {$colors['link_color']};
 	}
 
+	input[type="date"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="week"]:focus,
+	input[type="month"]:focus,
 	input[type="text"]:focus,
 	input[type="email"]:focus,
 	input[type="url"]:focus,
 	input[type="password"]:focus,
 	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
 	textarea:focus,
 	.tagcloud a:hover,
 	.tagcloud a:focus,
@@ -648,11 +692,18 @@ function furiagamingcommunity_get_color_scheme_css( $colors ) {
 	table,
 	th,
 	td,
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="week"],
+	input[type="month"],
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
 	input[type="password"],
 	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
 	textarea,
 	.main-navigation li,
 	.main-navigation .primary-menu,
@@ -881,11 +932,18 @@ function furiagamingcommunity_link_color_css() {
 			background-color: %1$s;
 		}
 
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
 		input[type="text"]:focus,
 		input[type="email"]:focus,
 		input[type="url"]:focus,
 		input[type="password"]:focus,
 		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
 		textarea:focus,
 		.tagcloud a:hover,
 		.tagcloud a:focus,
@@ -1002,11 +1060,18 @@ function furiagamingcommunity_main_text_color_css() {
 		table,
 		th,
 		td,
+		input[type="date"],
+		input[type="time"],
+		input[type="datetime-local"],
+		input[type="week"],
+		input[type="month"],
 		input[type="text"],
 		input[type="email"],
 		input[type="url"],
 		input[type="password"],
 		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
 		textarea,
 		.main-navigation li,
 		.main-navigation .primary-menu,

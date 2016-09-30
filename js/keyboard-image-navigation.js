@@ -1,5 +1,5 @@
 /**
- * Furia Gaming Community keyboard support for image navigation.
+ * Twenty Sixteen keyboard support for image navigation.
  */
 
 ( function( $ ) {

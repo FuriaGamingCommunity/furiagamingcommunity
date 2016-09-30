@@ -1,8 +1,8 @@
 <?php
 /**
- * Furia Gaming Community back compat functionality
+ * Twenty Sixteen back compat functionality
  *
- * Prevents Furia Gaming Community from running on WordPress versions prior to 4.4,
+ * Prevents Twenty Sixteen from running on WordPress versions prior to 4.4,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.4.
  *
@@ -12,7 +12,7 @@
  */
 
 /**
- * Prevent switching to Furia Gaming Community on old versions of WordPress.
+ * Prevent switching to Twenty Sixteen on old versions of WordPress.
  *
  * Switches to the default theme.
  *
@@ -31,14 +31,14 @@ add_action( 'after_switch_theme', 'furiagamingcommunity_switch_theme' );
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Furia Gaming Community on WordPress versions prior to 4.4.
+ * Twenty Sixteen on WordPress versions prior to 4.4.
  *
  * @since Furia Gaming Community 1.0
  *
  * @global string $wp_version WordPress version.
  */
 function furiagamingcommunity_upgrade_notice() {
-	$message = sprintf( __( 'Furia Gaming Community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] );
+	$message = sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -50,7 +50,7 @@ function furiagamingcommunity_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function furiagamingcommunity_customize() {
-	wp_die( sprintf( __( 'Furia Gaming Community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] ), '', array(
+	wp_die( sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
@@ -65,7 +65,7 @@ add_action( 'load-customize.php', 'furiagamingcommunity_customize' );
  */
 function furiagamingcommunity_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'Furia Gaming Community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'furiagamingcommunity' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'furiagamingcommunity_preview' );
