@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Sixteen Customizer functionality
+ * Furia Gaming Community Customizer functionality
  *
  * @package WordPress
  * @subpackage Furia_Gaming_Community
@@ -20,7 +20,7 @@ function furiagamingcommunity_custom_header_and_background() {
 	$default_text_color       = trim( $color_scheme[3], '#' );
 
 	/**
-	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-background' support in Furia Gaming Community.
 	 *
 	 * @since Furia Gaming Community 1.0
 	 *
@@ -35,7 +35,7 @@ function furiagamingcommunity_custom_header_and_background() {
 	) ) );
 
 	/**
-	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-header' support in Furia Gaming Community.
 	 *
 	 * @since Furia Gaming Community 1.0
 	 *
@@ -190,7 +190,7 @@ add_action( 'customize_register', 'furiagamingcommunity_customize_register', 11 
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
+ * @since Furia Gaming Community 1.2
  * @see furiagamingcommunity_customize_register()
  *
  * @return void
@@ -202,7 +202,7 @@ function furiagamingcommunity_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
+ * @since Furia Gaming Community 1.2
  * @see furiagamingcommunity_customize_register()
  *
  * @return void
@@ -212,7 +212,7 @@ function furiagamingcommunity_customize_partial_blogdescription() {
 }
 
 /**
- * Registers color schemes for Twenty Sixteen.
+ * Registers color schemes for Furia Gaming Community.
  *
  * Can be filtered with {@see 'furiagamingcommunity_color_schemes'}.
  *
@@ -229,7 +229,7 @@ function furiagamingcommunity_customize_partial_blogdescription() {
  */
 function furiagamingcommunity_get_color_schemes() {
 	/**
-	 * Filter the color schemes registered for use with Twenty Sixteen.
+	 * Filter the color schemes registered for use with Furia Gaming Community.
 	 *
 	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
@@ -304,7 +304,7 @@ function furiagamingcommunity_get_color_schemes() {
 
 if ( ! function_exists( 'furiagamingcommunity_get_color_scheme' ) ) :
 /**
- * Retrieves the current Twenty Sixteen color scheme.
+ * Retrieves the current Furia Gaming Community color scheme.
  *
  * Create your own furiagamingcommunity_get_color_scheme() function to override in a child theme.
  *
@@ -326,7 +326,7 @@ endif; // furiagamingcommunity_get_color_scheme
 
 if ( ! function_exists( 'furiagamingcommunity_get_color_scheme_choices' ) ) :
 /**
- * Retrieves an array of color scheme choices registered for Twenty Sixteen.
+ * Retrieves an array of color scheme choices registered for Furia Gaming Community.
  *
  * Create your own furiagamingcommunity_get_color_scheme_choices() function to override
  * in a child theme.
@@ -350,7 +350,7 @@ endif; // furiagamingcommunity_get_color_scheme_choices
 
 if ( ! function_exists( 'furiagamingcommunity_sanitize_color_scheme' ) ) :
 /**
- * Handles sanitization for Twenty Sixteen color schemes.
+ * Handles sanitization for Furia Gaming Community color schemes.
  *
  * Create your own furiagamingcommunity_sanitize_color_scheme() function to override
  * in a child theme.

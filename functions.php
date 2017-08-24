@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Sixteen functions and definitions
+ * Furia Gaming Community functions and definitions
  *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -26,7 +26,7 @@
  */
 
 /**
- * Twenty Sixteen only works in WordPress 4.4 or later.
+ * Furia Gaming Community only works in WordPress 4.4 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -48,7 +48,7 @@ function furiagamingcommunity_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/furiagamingcommunity
-	 * If you're building a theme based on Twenty Sixteen, use a find and replace
+	 * If you're building a theme based on Furia Gaming Community, use a find and replace
 	 * to change 'furiagamingcommunity' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'furiagamingcommunity' );
@@ -67,7 +67,7 @@ function furiagamingcommunity_setup() {
 	/*
 	 * Enable support for custom logo.
 	 *
-	 *  @since Twenty Sixteen 1.2
+	 *  @since Furia Gaming Community 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
 		'height'      => 240,
@@ -152,6 +152,7 @@ add_action( 'after_setup_theme', 'furiagamingcommunity_content_width', 0 );
  * @since Furia Gaming Community 1.0
  */
 function furiagamingcommunity_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'furiagamingcommunity' ),
 		'id'            => 'sidebar-1',
@@ -181,12 +182,22 @@ function furiagamingcommunity_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Showcase', 'furiagamingcommunity' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your showcase area at the front page.', 'furiagamingcommunity' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+		) );
 }
 add_action( 'widgets_init', 'furiagamingcommunity_widgets_init' );
 
 if ( ! function_exists( 'furiagamingcommunity_fonts_url' ) ) :
 /**
- * Register Google fonts for Twenty Sixteen.
+ * Register Google fonts for Furia Gaming Community.
  *
  * Create your own furiagamingcommunity_fonts_url() function to override in a child theme.
  *
@@ -201,12 +212,12 @@ function furiagamingcommunity_fonts_url() {
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'furiagamingcommunity' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+		$fonts[] = 'Merriweather:300,400,700,300italic,400italic,700italic';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'furiagamingcommunity' ) ) {
-		$fonts[] = 'Montserrat:400,700';
+	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'furiagamingcommunity' ) ) {
+		$fonts[] = 'Open Sans:300,400,700,300italic,400italic,700italic';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
@@ -407,7 +418,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'furiagamingcommunity_post_thu
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
  *
- * @since Twenty Sixteen 1.1
+ * @since Furia Gaming Community 1.1
  *
  * @param array $args Arguments for tag cloud widget.
  * @return array A new modified arguments.

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying search forms in Twenty Sixteen
+ * Template for displaying search forms in Furia Gaming Community
  *
  * @package WordPress
  * @subpackage Furia_Gaming_Community
