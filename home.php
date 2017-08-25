@@ -14,8 +14,8 @@
  * @since Furia Gaming Community 1.0
  */
 
-get_header(); ?>
-
+get_header();
+?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -25,12 +25,6 @@ get_header(); ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-			<?php endif; ?>
-
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<aside id="secondary" class="showcase widget-area" role="complementary">
-					<?php dynamic_sidebar( 'sidebar-4' ); ?>
-				</aside>
 			<?php endif; ?>
 
 			<?php

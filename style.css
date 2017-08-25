@@ -1821,14 +1821,14 @@ blockquote:after,
 .widget .widget-title
 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 14px;
+    font-size: .875rem;
     font-weight: 300;
-    line-height: 1.3125;
+    line-height: 1.4285714285;
 
     margin: 0 0 1.75em;
 
-    letter-spacing: .075em;
+    letter-spacing: .1428571428em;
     text-transform: uppercase;
 
     border-bottom: 1px solid #303030;
@@ -3123,9 +3123,25 @@ body.search-no-results .page-header
     content: '\f405';
 }
 
+/**
+ * 11.5 - Showcase
+ */
+
+.showcase
+{
+    display: block;
+
+    width: 100%;
+}
+
+.home .site-main .showcase
+{
+    flex: 1 1 100%;
+}
+
 
 /**
- * 11.5 - Sidebar
+ * 11.6 - Sidebar
  */
 
 .sidebar
@@ -3136,7 +3152,7 @@ body.search-no-results .page-header
 
 
 /**
- * 11.6 - Footer
+ * 11.7 - Footer
  */
 
 .site-footer
@@ -3602,7 +3618,7 @@ p > video
 
     .site-description
     {
-        display: block;
+        display: none;
     }
 
     .menu-toggle

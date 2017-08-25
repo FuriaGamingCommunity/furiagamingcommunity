@@ -220,6 +220,11 @@ function furiagamingcommunity_fonts_url() {
 		$fonts[] = 'Open Sans:300,400,700,300italic,400italic,700italic';
 	}
 
+	/* translators: If there are characters in your language that are not supported by Balthazar, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Balthazar font: on or off', 'furiagamingcommunity' ) ) {
+		$fonts[] = 'Balthazar:400';
+	}
+
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'furiagamingcommunity' ) ) {
 		$fonts[] = 'Inconsolata:400';
