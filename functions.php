@@ -47,11 +47,11 @@ if ( ! function_exists( 'furiagamingcommunity_setup' ) ) :
 function furiagamingcommunity_setup() {
 	/*
 	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
+	 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/furiagamingcommunity
 	 * If you're building a theme based on Furia Gaming Community, use a find and replace
 	 * to change 'furiagamingcommunity' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'furiagamingcommunity', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'furiagamingcommunity' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -63,6 +63,17 @@ function furiagamingcommunity_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+
+	/*
+	 * Enable support for custom logo.
+	 *
+	 *  @since Furia Gaming Community 1.2
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 240,
+		'width'       => 240,
+		'flex-height' => true,
+	) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -112,6 +123,9 @@ function furiagamingcommunity_setup() {
 	 * specifically font, colors, icons, and column width.
 	 */
 	add_editor_style( array( 'css/editor-style.css', furiagamingcommunity_fonts_url() ) );
+
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif; // furiagamingcommunity_setup
 add_action( 'after_setup_theme', 'furiagamingcommunity_setup' );
@@ -138,6 +152,7 @@ add_action( 'after_setup_theme', 'furiagamingcommunity_content_width', 0 );
  * @since Furia Gaming Community 1.0
  */
 function furiagamingcommunity_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'furiagamingcommunity' ),
 		'id'            => 'sidebar-1',
@@ -167,6 +182,16 @@ function furiagamingcommunity_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Showcase', 'furiagamingcommunity' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your showcase area at the front page.', 'furiagamingcommunity' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+		) );
 }
 add_action( 'widgets_init', 'furiagamingcommunity_widgets_init' );
 
@@ -187,12 +212,17 @@ function furiagamingcommunity_fonts_url() {
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'furiagamingcommunity' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+		$fonts[] = 'Merriweather:300,400,700,300italic,400italic,700italic';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'furiagamingcommunity' ) ) {
-		$fonts[] = 'Montserrat:400,700';
+	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'furiagamingcommunity' ) ) {
+		$fonts[] = 'Open Sans:300,400,700,300italic,400italic,700italic';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Balthazar, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Balthazar font: on or off', 'furiagamingcommunity' ) ) {
+		$fonts[] = 'Balthazar:400';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
@@ -239,32 +269,32 @@ function furiagamingcommunity_scripts() {
 	wp_enqueue_style( 'furiagamingcommunity-style', get_stylesheet_uri() );
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'furiagamingcommunity-ie', get_template_directory_uri() . '/css/ie.css', array( 'furiagamingcommunity-style' ), '20150930' );
+	wp_enqueue_style( 'furiagamingcommunity-ie', get_template_directory_uri() . '/css/ie.css', array( 'furiagamingcommunity-style' ), '20160816' );
 	wp_style_add_data( 'furiagamingcommunity-ie', 'conditional', 'lt IE 10' );
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'furiagamingcommunity-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'furiagamingcommunity-style' ), '20151230' );
+	wp_enqueue_style( 'furiagamingcommunity-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'furiagamingcommunity-style' ), '20160816' );
 	wp_style_add_data( 'furiagamingcommunity-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'furiagamingcommunity-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'furiagamingcommunity-style' ), '20150930' );
+	wp_enqueue_style( 'furiagamingcommunity-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'furiagamingcommunity-style' ), '20160816' );
 	wp_style_add_data( 'furiagamingcommunity-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'furiagamingcommunity-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'furiagamingcommunity-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'furiagamingcommunity-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151112', true );
+	wp_enqueue_script( 'furiagamingcommunity-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'furiagamingcommunity-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20151104' );
+		wp_enqueue_script( 'furiagamingcommunity-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
 	}
 
-	wp_enqueue_script( 'furiagamingcommunity-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20151204', true );
+	wp_enqueue_script( 'furiagamingcommunity-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
 
 	wp_localize_script( 'furiagamingcommunity-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'furiagamingcommunity' ),
@@ -405,6 +435,3 @@ function furiagamingcommunity_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'furiagamingcommunity_widget_tag_cloud_args' );
-
-// Jetpack development mode
-define( 'JETPACK_DEV_DEBUG', true); 

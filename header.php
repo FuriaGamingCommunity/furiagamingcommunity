@@ -23,12 +23,15 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'furiagamingcommunity' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
+					<?php furiagamingcommunity_the_custom_logo(); ?>
+
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
@@ -95,3 +98,9 @@
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">
+
+			<?php if ( is_front_page() && is_home() ) : ?>
+			<aside id="secondary" class="showcase widget-area" role="complementary">
+				<?php dynamic_sidebar( 'sidebar-4' ); ?>
+			</aside>
+			<?php endif; ?>
