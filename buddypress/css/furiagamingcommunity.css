@@ -240,11 +240,6 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 * The main navigational elements for all BP screens
 *----------------------------------------------------------
 */
-#buddypress div.item-list-tabs ul li.selected a
-{
-    opacity: 1;
-    background: inherit;
-}
 
 #buddypress div.item-list-tabs ul
 {
@@ -252,19 +247,79 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 
     padding: 0;
 
-    border-top: 1px solid rgba(234, 234, 234, .9);
-    border-bottom: 1px solid rgba(234, 234, 234, .9);
-    background-color: #f7f5e7;
+    background: rgba(51, 51, 51,.75);
 }
 
 #buddypress div.item-list-tabs ul li a
 {
-    color: #0073c1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1;
+
+    position: relative;
+
+    display: block;
+
+    padding: 0;
+
+    transition: color 400ms ease-in-out, border 400ms ease-in-out;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    color: #fa0;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid transparent;
+    border-left: none;
+    background: transparent;
+}
+
+#buddypress div.item-list-tabs ul li + li a
+{
+    margin-left: .5384615385em;
+}
+
+
+#buddypress div.item-list-tabs ul li a:focus,
+#buddypress div.item-list-tabs ul li a:hover,
+#buddypress div.item-list-tabs ul li.selected a
+{
+    color: #fb0;
+    border-color: #fb0;
+    border-color: currentColor;
+}
+
+#buddypress div.item-list-tabs ul li.selected a
+{
+    font-weight: 400;
+
+    background: transparent;
 }
 
 #buddypress div.item-list-tabs ul li a span
 {
-    border-radius: 25%;
+    font-size: 80%;
+
+    padding: 0 6px;
+
+    transition: background-color 400ms ease-in-out, border-radius 400ms ease-in-out;
+    vertical-align: baseline;
+
+    color: #333;
+    border: none;
+    border-radius: 2px;
+    background-color: #fa0;
+    text-shadow: none;
+}
+
+#buddypress div.item-list-tabs ul li a:hover span,
+#buddypress div.item-list-tabs ul li a:focus span,
+#buddypress div.item-list-tabs ul li.selected a span
+{
+    background-color: #fb0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 @media screen and (max-width: 38.75em)
