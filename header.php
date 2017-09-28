@@ -24,7 +24,14 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<div class="site-inner">
+<?php if ( is_front_page() && is_home() ) : ?>
+<aside id="secondary" class="showcase widget-area" role="complementary">
+	<?php dynamic_sidebar( 'sidebar-4' ); ?>
+</aside>
+<?php endif; // End showcase area check. ?>
+
+<div class="site-inner">
+
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'furiagamingcommunity' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
@@ -95,12 +102,7 @@
 					</a>
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
+
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">
-
-			<?php if ( is_front_page() && is_home() ) : ?>
-			<aside id="secondary" class="showcase widget-area" role="complementary">
-				<?php dynamic_sidebar( 'sidebar-4' ); ?>
-			</aside>
-			<?php endif; ?>

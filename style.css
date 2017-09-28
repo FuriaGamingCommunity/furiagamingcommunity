@@ -1600,6 +1600,7 @@ a:active
 .tags-links a[rel~='tag']
 {
     position: relative;
+
     display: inline-block;
 
     padding: .3846153846em .5384615385em;
@@ -2245,8 +2246,8 @@ blockquote:after,
 
     margin: 0 7.6923% 1.75em;
 
-    border-radius: 2px;
     border: 1px solid #7f7f7f;
+    border-radius: 2px;
 }
 
 .post-thumbnail img
@@ -3929,10 +3930,16 @@ p > video
 
     .site-header-menu
     {
+        position: fixed;
+        top: 0;
+        left: 0;
+
         display: block;
         -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
+
+        width: 100%;
     }
 
     .main-navigation
