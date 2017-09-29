@@ -55,6 +55,11 @@
 					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'furiagamingcommunity' ); ?></button>
 
 					<div id="site-header-menu" class="site-header-menu">
+
+						<div class="site-header-branding">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/navbar.png"/ alt="<?php bloginfo( 'name' ); ?>"></a>
+						</div><!-- .site-branding -->
+
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
 							<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'furiagamingcommunity' ); ?>">
 								<?php
