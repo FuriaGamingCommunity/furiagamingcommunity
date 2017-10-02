@@ -68,7 +68,7 @@ html
 
 body
 {
-    margin: 0;
+    margin: 42px 0 0;
 }
 
 article,
@@ -381,7 +381,7 @@ h6
     letter-spacing: .025em;
 
     color: #aaa;
-    text-shadow: 1px 1px .025em #303030;
+    text-shadow: 1px 1px .025em #222;
 
     text-rendering: optimizeLegibility;
 }
@@ -572,7 +572,7 @@ hr
     margin: 0 0 1.75em;
 
     border: 0;
-    background-color: #303030;
+    background-color: #222;
 }
 
 ul,
@@ -794,10 +794,10 @@ textarea
     transition: color 400ms ease-in-out, border-color 400ms ease-in-out;
 
     color: #7f7f7f;
-    border: 1px solid #7f7f7f;
+    border: 1px solid #222;
     border-radius: 2px;
     outline: none;
-    background: transparent;
+    background: #222;
 }
 
 input[type='date']:focus,
@@ -958,6 +958,8 @@ a:active
 
 .site-header-menu
 {
+    z-index: 98;
+
     display: none;
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
@@ -1008,7 +1010,7 @@ a:active
     text-transform: uppercase;
 
     color: #ddd;
-    text-shadow: 1px 1px .025em #303030;
+    text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222;
 }
 
 .site-footer .main-navigation
@@ -1916,7 +1918,7 @@ blockquote:after,
     letter-spacing: .1428571428em;
     text-transform: uppercase;
 
-    border-bottom: 1px solid #303030;
+    border-bottom: 1px solid #222;
 }
 
 .widget .widget-title:after
@@ -2916,7 +2918,7 @@ body.search-no-results .page-header
 
     padding-top: 1.217391304em;
 
-    border-top: 1px solid #303030;
+    border-top: 1px solid #222;
 }
 
 .comments-title
@@ -3110,16 +3112,17 @@ body.search-no-results .page-header
 
 .comment-form label
 {
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.4285714285;
 
     display: block;
 
     margin-bottom: .5384615385em;
 
-    letter-spacing: .076923077em;
+    letter-spacing: .1428571428em;
     text-transform: uppercase;
 
     color: #aaa;
@@ -4014,7 +4017,8 @@ p > video
 
         margin: 0;
 
-        border-bottom: 1px solid #d1d1d1;
+        border-bottom: 1px solid #222;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.2);
     }
 
     .main-navigation ul ul ul
@@ -4030,9 +4034,9 @@ p > video
 
     .main-navigation ul ul li
     {
-        border: 1px solid #d1d1d1;
+        border: 1px solid #222;
         border-bottom-width: 0;
-        background-color: #fff;
+        background-color: #222;
     }
 
     .main-navigation ul ul a
@@ -4058,7 +4062,7 @@ p > video
         right: 9px;
 
         border-width: 0 10px 10px;
-        border-color: #d1d1d1 transparent;
+        border-color: #222 transparent;
     }
 
     .main-navigation ul ul:after
@@ -4067,7 +4071,7 @@ p > video
         right: 11px;
 
         border-width: 0 8px 8px;
-        border-color: #fff transparent;
+        border-color: #222 transparent;
     }
 
     .main-navigation li:hover > ul,
