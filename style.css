@@ -562,7 +562,7 @@ html
 
 body
 {
-    background: #333;
+    background: #333 url('./images/page-background.jpg') repeat 50% 0;
     /* Fallback for when there is no custom background color defined. */
 }
 
@@ -932,22 +932,24 @@ a:active
     outline: 0;
 }
 
-.page-content a,
-.entry-content a,
-.entry-summary a,
-.comment-content a
+.page-content p a,
+.entry-content p a,
+.entry-summary p a,
+.comment-content p a
 {
+    transition: border .4s ease-in-out;
+
     border-bottom: 2px solid #fa0;
 }
 
-.page-content a:focus,
-.page-content a:hover,
-.entry-content a:focus,
-.entry-content a:hover,
-.entry-summary a:focus,
-.entry-summary a:hover,
-.comment-content a:focus,
-.comment-content a:hover
+.page-content p a:focus,
+.page-content p a:hover,
+.entry-content p a:focus,
+.entry-content p a:hover,
+.entry-summary p a:focus,
+.entry-summary p a:hover,
+.comment-content p a:focus,
+.comment-content p a:hover
 {
     border-bottom: 3px solid #fb0;
 }
@@ -958,7 +960,7 @@ a:active
 
 .site-header-menu
 {
-    z-index: 98;
+    z-index: 99;
 
     display: none;
     -webkit-flex: 0 1 100%;
@@ -977,6 +979,44 @@ a:active
 .no-js .site-header-menu
 {
     display: block;
+}
+
+.site-header-menu .search-form,
+.site-header-menu .social-navigation
+{
+    float: right;
+}
+
+.site-header-menu .social-navigation li
+{
+    margin: 0;
+    padding: 0 .4375em;
+}
+
+.site-header-menu .social-navigation a,
+.site-header-menu .social-navigation a:before
+{
+    font-size: 1rem;
+    line-height: 2.625rem;
+
+    width: auto;
+    height: auto;
+}
+
+.site-header-menu .search-form .search-field
+{
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
+    width: auto;
+    padding: .4615384615em .5384615385em .4615384615em 2em;
+}
+
+.site-header-menu .search-form .search-submit
+{
+    display: none;
+    visibility: hidden;
 }
 
 .site-header-branding
@@ -1000,13 +1040,14 @@ a:active
 .main-navigation
 {
     font-family: 'Lato', sans-serif;
-    font-weight: 200;
-    /* font-style: italic; */
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 300;
 
     display: inline-block;
 
     vertical-align: top;
-    letter-spacing: 2px;
+    letter-spacing: .1428571428em;
     text-transform: uppercase;
 
     color: #ddd;
@@ -1040,7 +1081,7 @@ a:active
 
     padding: .84375em 0;
 
-    color: #fff;
+    color: #ddd;
     outline-offset: -1px;
 }
 
@@ -1076,6 +1117,14 @@ a:active
 .main-navigation .current-menu-ancestor > a
 {
     font-weight: 700;
+}
+
+.main-navigation .primary-menu > li > a
+{
+    line-height: 2.625rem;
+
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .main-navigation ul ul
@@ -1196,8 +1245,6 @@ a:active
     height: 35px;
 
     color: #fff;
-    border: 1px solid #d1d1d1;
-    border-radius: 50%;
 }
 
 .social-navigation a:before
@@ -2096,6 +2143,9 @@ blockquote:after,
 
 .site-header
 {
+    display: none;
+    visibility: hidden;
+
     padding: 2.625em 7.6923%;
 }
 
@@ -2303,9 +2353,6 @@ blockquote:after,
     display: block;
 
     margin: 0 7.6923% 1.75em;
-
-    border: 1px solid #7f7f7f;
-    border-radius: 2px;
 }
 
 .post-thumbnail img
@@ -2474,13 +2521,38 @@ a.post-thumbnail:focus
         -ms-hyphens: auto;
 }
 
-body.home .entry-summary
+body.home article .post-thumbnail img
+{
+    transition: -webkit-filter .4s ease-in-out;
+
+    -webkit-filter: grayscale(0);
+}
+
+body.home article:hover .post-thumbnail img
+{
+    -webkit-filter: grayscale(.7);
+    -webkit-backface-visibility: hidden;
+}
+
+body.home article .entry-title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25em;
+
+    margin-bottom: .5rem;
+
+    text-transform: uppercase;
+}
+
+body.home article .entry-summary
 {
     font-size: 14px;
     font-size: .875rem;
-    line-height: 1.71428571428571em;
+    line-height: 1.25rem;
 
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 body:not(.home):not(.search-results) .entry-summary
@@ -3236,6 +3308,10 @@ body.search-no-results .page-header
     flex: 1 1 100%;
 }
 
+.showcase .hero
+{
+    position: relative;
+}
 
 /**
  * 11.6 - Sidebar
