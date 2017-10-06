@@ -435,3 +435,16 @@ function furiagamingcommunity_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'furiagamingcommunity_widget_tag_cloud_args' );
+
+
+/**
+ * Removes the administrator bar for all users except administrators.
+ *
+ * @since Furia Gaming Community 1.1
+ */
+function furiagamingcommunity_remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+		show_admin_bar(false);
+	}
+}
+add_action('after_setup_theme', 'furiagamingcommunity_remove_admin_bar');
