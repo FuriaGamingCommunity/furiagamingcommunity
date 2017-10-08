@@ -1041,14 +1041,14 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
     display: block;
 
     margin-bottom: 5px;
+
+    float: left;
 }
 
 @media screen and (min-width: 38.75em)
 {
     #buddypress #activity-stream .activity-content .activity-meta a
     {
-        display: inline-block;
-
         margin-bottom: 0;
     }
 }
