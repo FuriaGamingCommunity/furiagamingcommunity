@@ -384,6 +384,8 @@ h6
     text-shadow: 1px 1px .025em #222;
 
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p
@@ -1125,6 +1127,13 @@ a:active
 
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.main-navigation .primary-menu a:active,
+.main-navigation .primary-menu a:focus,
+.main-navigation .primary-menu a:hover
+{
+    color: #fff;
 }
 
 .main-navigation ul ul
@@ -4080,7 +4089,7 @@ p > video
     .main-navigation li:hover > a,
     .main-navigation li.focus > a
     {
-        color: #fa0;
+        color: #fff;
     }
 
     .main-navigation ul ul
