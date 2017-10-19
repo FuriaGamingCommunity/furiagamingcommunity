@@ -44,16 +44,9 @@
     background: transparent;
 }
 
-#bbpress-forums div.even,
-#bbpress-forums ul.even
+#bbpress-forums .bbp-body ul
 {
-    background-color: rgba(34, 34, 34, .25);
-}
-
-#bbpress-forums div.odd,
-#bbpress-forums ul.odd
-{
-    background-color: rgba(34, 34, 34, .75);
+    background-color: #222;
 }
 
 body.reply-edit .reply

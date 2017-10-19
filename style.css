@@ -934,10 +934,10 @@ a:active
     outline: 0;
 }
 
-.page-content p a,
-.entry-content p a,
-.entry-summary p a,
-.comment-content p a
+.page-content p > a,
+.entry-content p > a,
+.entry-summary p > a,
+.comment-content p > a
 {
     transition: border .4s ease-in-out;
 
@@ -1253,7 +1253,7 @@ a:active
     width: 35px;
     height: 35px;
 
-    color: #fff;
+    color: #ddd;
 }
 
 .social-navigation a:before
@@ -1264,13 +1264,16 @@ a:active
     height: 33px;
 
     content: '\f415';
+    transition: color 400ms ease-in-out, text-shadow 400ms ease-in-out;
     text-align: center;
+
+    text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222;
 }
 
 .social-navigation a:hover:before,
 .social-navigation a:focus:before
 {
-    color: #fa0;
+    color: #fff;
 }
 
 .social-navigation a[href*='codepen.io']:before
