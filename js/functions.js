@@ -6,7 +6,7 @@
  */
 
 ( function( $ ) {
-	var body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
+	var body, mastHead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
 	function initMainNavigation( container ) {
 
@@ -44,11 +44,11 @@
 	}
 	initMainNavigation( $( '.main-navigation' ) );
 
-	masthead         = $( '#masthead' );
-	menuToggle       = masthead.find( '#menu-toggle' );
-	siteHeaderMenu   = masthead.find( '#site-header-menu' );
-	siteNavigation   = masthead.find( '#site-navigation' );
-	socialNavigation = masthead.find( '#social-navigation' );
+	mastHead         = $( '#mast-head' );
+	menuToggle       = mastHead.find( '#menu-toggle' );
+	siteHeaderMenu   = mastHead.find( '#site-header-menu' );
+	siteNavigation   = mastHead.find( '#site-navigation' );
+	socialNavigation = mastHead.find( '#social-navigation' );
 
 	// Enable menuToggle.
 	( function() {

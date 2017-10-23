@@ -334,7 +334,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "Furia Gaming Community is a modernized take on an ever-popular WordPress layout — "
-"the horizontal masthead with an optional right sidebar that works perfectly "
+"the horizontal mast-head with an optional right sidebar that works perfectly "
 "for blogs and websites. It has custom color options with beautiful default "
 "color schemes, a harmonious fluid grid using a mobile-first approach, and "
 "impeccable polish in every detail. Furia Gaming Community will make your WordPress "
