@@ -136,12 +136,12 @@ small
 sub,
 sup
 {
+    font-size: 75%;
+    line-height: 0;
+
     position: relative;
 
     vertical-align: baseline;
-
-    font-size: 75%;
-    line-height: 0;
 }
 
 sup
@@ -190,11 +190,11 @@ optgroup,
 select,
 textarea
 {
+    font: inherit;
+
     margin: 0;
 
     color: inherit;
-
-    font: inherit;
 }
 
 select
@@ -327,19 +327,19 @@ optgroup
 .pagination .nav-links:after,
 .search-submit:before
 {
-    display: inline-block;
-
-    text-align: center;
-    vertical-align: top;
-    text-decoration: inherit;
-    text-transform: none;
-
     font-family: 'Genericons';
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
     line-height: 1;
+
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: top;
+    text-decoration: inherit;
+    text-transform: none;
 
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -357,12 +357,12 @@ input,
 select,
 textarea
 {
-    color: #aaa;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.75;
+
+    color: #aaa;
 }
 
 h1,
@@ -372,6 +372,8 @@ h4,
 h5,
 h6
 {
+    font-weight: 700;
+
     clear: both;
 
     margin: 0;
@@ -381,8 +383,6 @@ h6
     color: #aaa;
     text-shadow: 1px 1px .025em #222;
 
-    font-weight: 700;
-
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -391,6 +391,10 @@ h6
 p
 {
     margin: 0 0 1.75em;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 dfn,
@@ -403,6 +407,11 @@ i
 
 blockquote
 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    font-style: italic;
+    line-height: 1.4736842105;
+
     overflow: hidden;
 
     margin: 0 0 1.4736842105em;
@@ -411,11 +420,6 @@ blockquote
     color: #aaa;
     border: 0 solid #fff;
     border-left-width: 4px;
-
-    font-size: 19px;
-    font-size: 1.1875rem;
-    font-style: italic;
-    line-height: 1.4736842105;
 }
 
 blockquote,
@@ -440,13 +444,13 @@ blockquote p
 blockquote cite,
 blockquote small
 {
-    display: block;
-
-    color: #fff;
-
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.75;
+
+    display: block;
+
+    color: #fff;
 }
 
 blockquote cite:before,
@@ -475,9 +479,9 @@ blockquote > :last-child
 
 address
 {
-    margin: 0 0 1.75em;
-
     font-style: italic;
+
+    margin: 0 0 1.75em;
 }
 
 code,
@@ -492,6 +496,10 @@ pre
 
 pre
 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+
     overflow: auto;
 
     max-width: 100%;
@@ -503,10 +511,6 @@ pre
     word-wrap: break-word;
 
     border: 1px solid #d1d1d1;
-
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.3125;
 }
 
 code
@@ -647,8 +651,8 @@ table
 
     table-layout: fixed;
     border-spacing: 0;
-
     border-collapse: separate;
+
     border-width: 1px 0 0 1px;
 }
 
@@ -656,16 +660,16 @@ caption,
 th,
 td
 {
-    text-align: left;
-
     font-weight: normal;
+
+    text-align: left;
 }
 
 th
 {
-    border-width: 0 1px 1px 0;
-
     font-weight: 700;
+
+    border-width: 0 1px 1px 0;
 }
 
 td
@@ -682,32 +686,32 @@ td
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder
 {
-    color: #aaa;
-
     font-family: 'Open Sans', sans-serif;
+
+    color: #aaa;
 }
 
 :-moz-placeholder
 {
-    color: #aaa;
-
     font-family: 'Open Sans', sans-serif;
+
+    color: #aaa;
 }
 
 ::-moz-placeholder
 {
+    font-family: 'Open Sans', sans-serif;
+
     opacity: 1;
     color: #aaa;
-
-    font-family: 'Open Sans', sans-serif;
     /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder
 {
-    color: #aaa;
-
     font-family: 'Open Sans', sans-serif;
+
+    color: #aaa;
 }
 
 
@@ -739,6 +743,9 @@ input[type='submit'],
 input[type='submit'][disabled]:hover,
 input[type='submit'][disabled]:focus
 {
+    font-weight: 700;
+    line-height: 1;
+
     padding: .84375em .875em .78125em;
 
     letter-spacing: .046875em;
@@ -748,9 +755,6 @@ input[type='submit'][disabled]:focus
     border: 1px solid #fa0;
     border-radius: 2px;
     background-color: #fa0;
-
-    font-weight: 700;
-    line-height: 1;
 }
 
 button:hover,
@@ -833,6 +837,11 @@ textarea:focus
 
 .post-password-form label
 {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     display: block;
 
     margin-bottom: 1.75em;
@@ -841,11 +850,6 @@ textarea:focus
     text-transform: uppercase;
 
     color: #aaa;
-
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 .post-password-form input[type='password']
@@ -873,15 +877,15 @@ input[type='search'].search-field
 
 .search-submit:before
 {
+    font-size: 24px;
+    line-height: 42px;
+
     position: relative;
     left: 2px;
 
     width: 40px;
 
     content: '\f400';
-
-    font-size: 24px;
-    line-height: 42px;
 }
 
 .search-submit
@@ -998,21 +1002,21 @@ a:active
 .site-header-menu .social-navigation a,
 .site-header-menu .social-navigation a:before
 {
-    width: auto;
-    height: auto;
-
     font-size: 1rem;
     line-height: 2.625rem;
+
+    width: auto;
+    height: auto;
 }
 
 .site-header-menu .search-form .search-field
 {
-    width: auto;
-    padding: .4615384615em .5384615385em .4615384615em 2em;
-
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    width: auto;
+    padding: .4615384615em .5384615385em .4615384615em 2em;
 }
 
 .site-header-menu .search-form .search-submit
@@ -1041,6 +1045,11 @@ a:active
 
 .main-navigation
 {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 300;
+
     display: inline-block;
 
     vertical-align: top;
@@ -1049,11 +1058,6 @@ a:active
 
     color: #ddd;
     text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222;
-
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-size: .875rem;
-    font-weight: 300;
 }
 
 .site-footer .main-navigation
@@ -1077,14 +1081,14 @@ a:active
 
 .main-navigation a
 {
+    line-height: 1.3125;
+
     display: block;
 
     padding: .84375em 0;
 
     color: #ddd;
     outline-offset: -1px;
-
-    line-height: 1.3125;
 }
 
 .main-navigation a:before
@@ -1123,10 +1127,10 @@ a:active
 
 .main-navigation .primary-menu > li > a
 {
+    line-height: 2.625rem;
+
     padding-top: 0;
     padding-bottom: 0;
-
-    line-height: 2.625rem;
 }
 
 .main-navigation .primary-menu a:active,
@@ -1184,6 +1188,8 @@ a:active
 
 .dropdown-toggle:after
 {
+    font-size: 24px;
+
     position: relative;
     left: 1px;
 
@@ -1193,8 +1199,6 @@ a:active
 
     border: 0 solid #d1d1d1;
     border-left-width: 1px;
-
-    font-size: 24px;
 }
 
 .dropdown-toggle:hover,
@@ -1258,6 +1262,8 @@ a:active
 
 .social-navigation a:before
 {
+    line-height: 33px;
+
     width: 33px;
     height: 33px;
 
@@ -1266,8 +1272,6 @@ a:active
     text-align: center;
 
     text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222;
-
-    line-height: 33px;
 }
 
 .social-navigation a:hover:before,
@@ -1414,14 +1418,14 @@ a:active
 
 .post-navigation
 {
+    font-family: 'Merriweather', serif;
+
     clear: both;
 
     margin: 0 7.6923% 3.5em;
 
     border-top: 4px solid #fff;
     border-bottom: 4px solid #fff;
-
-    font-family: 'Merriweather', serif;
 }
 
 .post-navigation a
@@ -1440,27 +1444,27 @@ a:active
 
 .post-navigation .meta-nav
 {
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     margin-bottom: .5384615385em;
 
     letter-spacing: .076923077em;
     text-transform: uppercase;
 
     color: #aaa;
-
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 .post-navigation .post-title
 {
-    display: inline;
-
     font-family: 'Merriweather', serif;
     font-size: 23px;
     font-size: 1.4375rem;
     font-weight: 700;
     line-height: 1.2173913043;
+
+    display: inline;
 
     text-rendering: optimizeLegibility;
 }
@@ -1478,16 +1482,16 @@ a:active
 
 .pagination
 {
+    font-family: 'Merriweather', serif;
+    font-size: 19px;
+    font-size: 1.1875rem;
+
     position: relative;
 
     min-height: 56px;
     margin: 0 7.6923% 2.947368421em;
 
     border-top: 4px solid #fff;
-
-    font-family: 'Merriweather', serif;
-    font-size: 19px;
-    font-size: 1.1875rem;
 }
 
 .pagination:before,
@@ -1531,6 +1535,9 @@ a:active
 .pagination .nav-links:before,
 .pagination .nav-links:after
 {
+    font-size: 32px;
+    line-height: 51px;
+
     position: absolute;
     z-index: 1;
 
@@ -1538,9 +1545,6 @@ a:active
 
     opacity: .3;
     color: #fff;
-
-    font-size: 32px;
-    line-height: 51px;
 }
 
 .pagination .nav-links:before
@@ -1565,6 +1569,8 @@ a:active
 
 .pagination .page-numbers
 {
+    line-height: 1;
+
     display: none;
 
     margin: 0 .7368421053em 0 -.7368421053em;
@@ -1572,15 +1578,13 @@ a:active
 
     letter-spacing: .013157895em;
     text-transform: uppercase;
-
-    line-height: 1;
 }
 
 .pagination .current
 {
-    display: inline-block;
-
     font-weight: 700;
+
+    display: inline-block;
 }
 
 .pagination .prev,
@@ -1605,13 +1609,13 @@ a:active
 .pagination .prev:before,
 .pagination .next:before
 {
+    font-size: 32px;
+    line-height: 52px;
+
     position: relative;
 
     width: 53px;
     height: 53px;
-
-    font-size: 32px;
-    line-height: 52px;
 }
 
 .pagination .prev:hover,
@@ -1658,17 +1662,17 @@ a:active
 .image-navigation,
 .comment-navigation
 {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     margin: 0 7.6923% 2.1538461538em;
     padding: 1.0769230769em 0;
 
     color: #aaa;
     border-top: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
-
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 .comment-navigation
@@ -1818,6 +1822,10 @@ a:active
 /* must have higher specificity than alternative color schemes inline styles */
 .site .skip-link
 {
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    font-weight: 700;
+
     top: -9999em;
     left: -9999em;
 
@@ -1832,17 +1840,13 @@ a:active
     outline: none;
     background-color: #f1f1f1;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
-
-    font-family: 'Merriweather', serif;
-    font-size: 14px;
-    font-weight: 700;
 }
 
 .logged-in .site .skip-link
 {
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
-
     font-family: 'Open Sans', sans-serif;
+
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
 }
 
 .site .skip-link:focus
@@ -1966,18 +1970,18 @@ blockquote:after,
 
 .widget .widget-title
 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.4285714285;
+
     margin: 0 0 1.75em;
 
     letter-spacing: .1428571428em;
     text-transform: uppercase;
 
     border-bottom: 1px solid #222;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-size: .875rem;
-    font-weight: 300;
-    line-height: 1.4285714285;
 }
 
 .widget .widget-title:after
@@ -2008,28 +2012,28 @@ blockquote:after,
 .widget_calendar td,
 .widget_calendar th
 {
+    line-height: 2.5625;
+
     padding: 0;
 
     text-align: center;
-
-    line-height: 2.5625;
 }
 
 .widget_calendar caption
 {
-    margin-bottom: 1.75em;
-
     font-weight: 900;
+
+    margin-bottom: 1.75em;
 }
 
 .widget_calendar tbody a
 {
+    font-weight: 700;
+
     display: block;
 
     color: #fff;
     background-color: #fa0;
-
-    font-weight: 700;
 }
 
 .widget_calendar tbody a:hover,
@@ -2042,16 +2046,16 @@ blockquote:after,
 /* Recent Posts widget */
 .widget_recent_entries .post-date
 {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.615384615;
+
     display: block;
 
     margin-bottom: .538461538em;
 
     color: #aaa;
-
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.615384615;
 }
 
 .widget_recent_entries li:last-child .post-date
@@ -2068,17 +2072,17 @@ blockquote:after,
 .widget_rss .rss-date,
 .widget_rss cite
 {
-    display: block;
-
-    margin-bottom: .538461538em;
-
-    color: #aaa;
-
     font-family: 'Merriweather', serif;
     font-size: 13px;
     font-size: .8125rem;
     font-style: normal;
     line-height: 1.615384615;
+
+    display: block;
+
+    margin-bottom: .538461538em;
+
+    color: #aaa;
 }
 
 .widget_rss .rssSummary:last-child
@@ -2094,6 +2098,9 @@ blockquote:after,
 /* Tag Cloud widget */
 .tagcloud a
 {
+    font-family: 'Merriweather', serif;
+    line-height: 1;
+
     display: inline-block;
 
     margin: 0 .1875em .4375em 0;
@@ -2101,9 +2108,6 @@ blockquote:after,
 
     border: 1px solid #d1d1d1;
     border-radius: 2px;
-
-    font-family: 'Merriweather', serif;
-    line-height: 1;
 }
 
 .tagcloud a:hover,
@@ -2155,7 +2159,7 @@ blockquote:after,
 
 .site-header
 {
-  margin-bottom: 3.75rem;
+    margin-bottom: 3.75rem;
 }
 
 .site-branding
@@ -2182,13 +2186,13 @@ blockquote:after,
 
 .site-title
 {
-    margin: 0;
-
     font-family: 'Merriweather', serif;
     font-size: 23px;
     font-size: 1.4375rem;
     font-weight: 700;
     line-height: 1.2173913043;
+
+    margin: 0;
 }
 
 .site-branding .site-title a
@@ -2209,29 +2213,29 @@ blockquote:after,
 
 .site-description
 {
+    font-size: 13px;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.0769230769;
+
     display: none;
 
     margin: .538461538em 0 0;
 
     color: #aaa;
-
-    font-size: 13px;
-    font-size: .8125rem;
-    font-weight: 400;
-    line-height: 1.0769230769;
 }
 
 .menu-toggle
 {
+    font-size: 13px;
+    font-size: .8125rem;
+
     margin: 1.076923077em 0;
     padding: .769230769em;
 
     color: #fff;
     border: 1px solid #d1d1d1;
     background-color: transparent;
-
-    font-size: 13px;
-    font-size: .8125rem;
 }
 
 .no-js .menu-toggle
@@ -2310,20 +2314,40 @@ blockquote:after,
     display: none;
 }
 
-.entry-title
+.entry-title,
+.page-title
 {
-    margin-bottom: .5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.2727272727;
 
-    font-family: 'Merriweather', serif;
-    font-size: 28px;
-    font-size: 1.75rem;
-    font-weight: 400;
-    line-height: 1.25;
+    white-space: normal;
+    letter-spacing: .025em;
+    text-transform: uppercase;
 }
 
-.entry-title a
+.entry-title a,
+.entry-title span,
+.page-title a,
+.page-title span
 {
     color: #fff;
+}
+
+body:not(.home-page) .entry-title a,
+body:not(.home-page) .entry-title span,
+body:not(.home-page) .page-title a,
+body:not(.home-page) .page-title span
+{
+    padding: 0 2px;
+
+    background: rgb(34, 34, 34);
+    box-shadow: 6px 0 0 rgb(34, 34, 34), -6px 0 0 rgb(34, 34, 34);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222;
+
+    text-rendering: optimizeLegibility;
 }
 
 .entry-title a:hover,
@@ -2334,16 +2358,16 @@ blockquote:after,
 
 .entry-meta
 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     margin-bottom: .92307692307692em;
 
     text-transform: uppercase;
 
     color: #7f7f7f;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 .post-thumbnail
@@ -2355,8 +2379,8 @@ blockquote:after,
 
 .home-page .post-thumbnail
 {
-  margin-right: 0;
-  margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .post-thumbnail img
@@ -2386,12 +2410,12 @@ a.post-thumbnail:focus
 .comment-content h1,
 .textwidget h1
 {
-    margin-top: 2em;
-    margin-bottom: 1em;
-
     font-size: 28px;
     font-size: 1.75rem;
     line-height: 1.25;
+
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .entry-content h2,
@@ -2399,12 +2423,12 @@ a.post-thumbnail:focus
 .comment-content h2,
 .textwidget h2
 {
-    margin-top: 2.4347826087em;
-    margin-bottom: 1.2173913043em;
-
     font-size: 23px;
     font-size: 1.4375rem;
     line-height: 1.2173913043;
+
+    margin-top: 2.4347826087em;
+    margin-bottom: 1.2173913043em;
 }
 
 .entry-content h3,
@@ -2412,12 +2436,12 @@ a.post-thumbnail:focus
 .comment-content h3,
 .textwidget h3
 {
-    margin-top: 2.9473684211em;
-    margin-bottom: 1.4736842105em;
-
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.1052631579;
+
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.4736842105em;
 }
 
 .entry-content h4,
@@ -2433,12 +2457,12 @@ a.post-thumbnail:focus
 .textwidget h5,
 .textwidget h6
 {
-    margin-top: 3.5em;
-    margin-bottom: 1.75em;
-
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.3125;
+
+    margin-top: 3.5em;
+    margin-bottom: 1.75em;
 }
 
 .entry-content h4,
@@ -2540,34 +2564,34 @@ a.post-thumbnail:focus
 
 .home-page article .entry-title
 {
-    margin-bottom: .5rem;
-
-    text-transform: uppercase;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.25em;
+
+    margin-bottom: .5rem;
+
+    text-transform: uppercase;
 }
 
 .home-page article .entry-summary
 {
-    margin-bottom: 1rem;
-
     font-size: 14px;
     font-size: .875rem;
     line-height: 1.25rem;
+
+    margin-bottom: 1rem;
 }
 
 body:not(.home):not(.search-results) .entry-summary
 {
-    margin-bottom: 1.4736842105em;
-
-    color: #aaa;
-
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.4736842105;
+
+    margin-bottom: 1.4736842105em;
+
+    color: #aaa;
 }
 
 body:not(.home):not(.search-results) .entry-header + .entry-summary
@@ -2673,27 +2697,27 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-content .author-title
 {
-    clear: none;
-
-    margin: 0;
-
     font-size: 16px;
     font-size: 1rem;
     font-weight: 900;
     line-height: 1.75;
+
+    clear: none;
+
+    margin: 0;
 }
 
 .author-bio
 {
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     overflow: hidden;
 
     margin-bottom: 1.6153846154em;
 
     color: #aaa;
-
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 .author-link
@@ -2703,14 +2727,14 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-footer
 {
-    margin-top: 2.1538461538em;
-
-    color: #aaa;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    margin-top: 2.1538461538em;
+
+    color: #aaa;
 }
 
 .home-page .entry-footer
@@ -2773,6 +2797,11 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .sticky-post
 {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6153846154;
+
     display: block;
 
     margin-bottom: .5384615385em;
@@ -2781,11 +2810,6 @@ body:not(.search-results) .entry-summary > :last-child,
     text-transform: uppercase;
 
     color: #aaa;
-
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6153846154;
 }
 
 /**
@@ -2814,8 +2838,6 @@ body:not(.search-results) .entry-summary > :last-child,
 {
     margin: 0 7.6923% 3.5em;
     padding-top: 1.75em;
-
-    border-top: 4px solid #fff;
 }
 
 body.error404 .page-header,
@@ -2826,21 +2848,13 @@ body.search-no-results .page-header
     border-top: 0;
 }
 
-.page-title
-{
-    font-family: 'Merriweather', serif;
-    font-size: 23px;
-    font-size: 1.4375rem;
-    line-height: 1.2173913043;
-}
-
 .taxonomy-description
 {
-    color: #aaa;
-
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    color: #aaa;
 }
 
 .taxonomy-description p
@@ -2855,16 +2869,20 @@ body.search-no-results .page-header
 
 .page-links
 {
+    font-family: 'Merriweather', serif;
+
     clear: both;
 
     margin: 0 0 1.75em;
-
-    font-family: 'Merriweather', serif;
 }
 
 .page-links a,
 .page-links > span
 {
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1.6923076923em;
+
     display: inline-block;
 
     width: 1.8461538462em;
@@ -2875,10 +2893,6 @@ body.search-no-results .page-header
 
     border: 1px solid #d1d1d1;
     border-radius: 2px;
-
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1.6923076923em;
 }
 
 .page-links a
@@ -2914,14 +2928,14 @@ body.search-no-results .page-header
 
 .entry-caption
 {
-    padding-top: 1.0769230769em;
-
-    color: #aaa;
-
     font-size: 13px;
     font-size: .8125rem;
     font-style: italic;
     line-height: 1.6153846154;
+
+    padding-top: 1.0769230769em;
+
+    color: #aaa;
 }
 
 .entry-caption > :last-child
@@ -2954,11 +2968,11 @@ body.search-no-results .page-header
 .format-audio .entry-title,
 .format-chat .entry-title
 {
-    margin-bottom: 1.473684211em;
-
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.473684211;
+
+    margin-bottom: 1.473684211em;
 }
 
 .blog .format-status .entry-title,
@@ -2986,15 +3000,15 @@ body.search-no-results .page-header
 .comments-title,
 .comment-reply-title
 {
-    padding-top: 1.217391304em;
-
-    border-top: 1px solid #222;
-
     font-family: 'Merriweather', serif;
     font-size: 23px;
     font-size: 1.4375rem;
     font-weight: 700;
     line-height: 1.3125;
+
+    padding-top: 1.217391304em;
+
+    border-top: 1px solid #222;
 }
 
 .comments-title
@@ -3060,12 +3074,12 @@ body.search-no-results .page-header
 .comment-metadata,
 .pingback .edit-link
 {
-    color: #aaa;
-
     font-family: 'Merriweather', serif;
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    color: #aaa;
 }
 
 .comment-metadata
@@ -3119,6 +3133,11 @@ body.search-no-results .page-header
 
 .comment-reply-link
 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 1;
+
     position: relative;
     z-index: 100;
 
@@ -3139,11 +3158,6 @@ body.search-no-results .page-header
     background-color: transparent;
     box-shadow: inset 0 0 1px transparent;
     text-shadow: 1px 1px 0 rgba(48, 48, 48, .3);
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 1;
 }
 
 .comment-reply-link:before
@@ -3188,6 +3202,12 @@ body.search-no-results .page-header
 
 .comment-form label
 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.4285714285;
+
     display: block;
 
     margin-bottom: .5384615385em;
@@ -3196,12 +3216,6 @@ body.search-no-results .page-header
     text-transform: uppercase;
 
     color: #aaa;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-size: .875rem;
-    font-weight: 300;
-    line-height: 1.4285714285;
 }
 
 .comment-list .comment-form
@@ -3214,24 +3228,24 @@ body.search-no-results .page-header
 .logged-in-as,
 .form-allowed-tags
 {
-    margin-bottom: 2.1538461538em;
-
-    color: #aaa;
-
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    margin-bottom: 2.1538461538em;
+
+    color: #aaa;
 }
 
 .no-comments
 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+
     margin: 0;
     padding-top: 1.75em;
 
     border-top: 1px solid #d1d1d1;
-
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
 }
 
 .comment-navigation + .no-comments
@@ -3253,9 +3267,9 @@ body.search-no-results .page-header
 
 .required
 {
-    color: #fa0;
-
     font-family: 'Open Sans', sans-serif;
+
+    color: #fa0;
 }
 
 .comment-reply-title small
@@ -3282,12 +3296,12 @@ body.search-no-results .page-header
 
 .comment-reply-title small a:before
 {
+    font-size: 32px;
+
     position: relative;
     top: -5px;
 
     content: '\f405';
-
-    font-size: 32px;
 }
 
 /**
@@ -3339,11 +3353,11 @@ body.search-no-results .page-header
 
 .site-info
 {
-    color: #aaa;
-
     font-size: 13px;
     font-size: .8125rem;
     line-height: 1.6153846154;
+
+    color: #aaa;
 }
 
 .site-info a
@@ -3366,6 +3380,8 @@ body.search-no-results .page-header
 
 .site-footer .site-title:after
 {
+    font-family: Montserrat, sans-serif;
+
     display: inline-block;
 
     padding: 0 .307692308em 0 .538461538em;
@@ -3373,8 +3389,6 @@ body.search-no-results .page-header
     content: '\002f';
 
     opacity: .7;
-
-    font-family: Montserrat, sans-serif;
 }
 
 
@@ -3483,14 +3497,14 @@ p > video
 
 .wp-caption .wp-caption-text
 {
-    padding-top: .5384615385em;
-
-    color: #aaa;
-
     font-size: 13px;
     font-size: .8125rem;
     font-style: italic;
     line-height: 1.6153846154;
+
+    padding-top: .5384615385em;
+
+    color: #aaa;
 }
 
 
@@ -3562,16 +3576,16 @@ p > video
 
 .gallery-caption
 {
+    font-size: 13px;
+    font-size: .8125rem;
+    font-style: italic;
+    line-height: 1.6153846154;
+
     display: block;
 
     padding-top: .5384615385em;
 
     color: #aaa;
-
-    font-size: 13px;
-    font-size: .8125rem;
-    font-style: italic;
-    line-height: 1.6153846154;
 }
 
 .gallery-columns-6 .gallery-caption,
@@ -3616,12 +3630,12 @@ p > video
 
 .widecolumn h2
 {
-    margin-bottom: 1.2173913043em;
-
     font-size: 23px;
     font-size: 1.4375rem;
     font-weight: 900;
     line-height: 1.2173913043;
+
+    margin-bottom: 1.2173913043em;
 }
 
 .widecolumn p
@@ -3637,16 +3651,16 @@ p > video
 .widecolumn label,
 .widecolumn .mu_register label
 {
-    letter-spacing: .076923077em;
-    text-transform: uppercase;
-
-    color: #aaa;
-
     font-family: 'Merriweather', serif;
     font-size: 13px;
     font-size: .8125rem;
     font-weight: 400;
     line-height: 1.6153846154;
+
+    letter-spacing: .076923077em;
+    text-transform: uppercase;
+
+    color: #aaa;
 }
 
 .widecolumn .mu_register label
@@ -3665,10 +3679,10 @@ p > video
 .widecolumn .mu_register #blogname,
 .widecolumn .mu_register #user_name
 {
-    width: 100%;
-
     font-size: 16px;
     font-size: 1rem;
+
+    width: 100%;
 }
 
 .widecolumn .mu_register #blogname
@@ -3686,11 +3700,11 @@ p > video
 .widecolumn #submit,
 .widecolumn .mu_register input[type='submit']
 {
-    width: auto;
-    margin: 0;
-
     font-size: 16px;
     font-size: 1rem;
+
+    width: auto;
+    margin: 0;
 }
 
 .widecolumn .mu_register .prefix_address,
@@ -3768,16 +3782,16 @@ p > video
 
     .menu-toggle
     {
-        margin: 1.3125em 0;
-        padding: .8125em .875em .6875em;
-
         font-size: 16px;
         font-size: 1.0rem;
+
+        margin: 1.3125em 0;
+        padding: .8125em .875em .6875em;
     }
 
     .site-header
     {
-      margin-bottom: 4.375rem;
+        margin-bottom: 4.375rem;
     }
 
     .site-header .main-navigation + .social-navigation
@@ -3867,13 +3881,13 @@ p > video
 
     .entry-title
     {
-        margin-bottom: .8484848485em;
-
-        color: #fff;
-
         font-size: 33px;
         font-size: 2.0625rem;
         line-height: 1.2727272727;
+
+        margin-bottom: .8484848485em;
+
+        color: #fff;
     }
 
     .home-page .entry-header,
@@ -3887,11 +3901,11 @@ p > video
 
     .home-page .entry-title
     {
-        margin-bottom: .5em;
-
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1.25;
+
+        margin-bottom: .5em;
     }
 
     .home-page .posted-on
@@ -4021,10 +4035,9 @@ p > video
 
 @media screen and (min-width: 56.875em)
 {
-
     .site-header
     {
-      margin-bottom: 5rem;
+        margin-bottom: 5rem;
     }
 
     .site-header-main
@@ -4255,12 +4268,12 @@ p > video
 
     .widget
     {
-        margin-bottom: 3.230769231em;
-        padding-top: 1.615384615em;
-
         font-size: 13px;
         font-size: .8125rem;
         line-height: 1.6153846154;
+
+        margin-bottom: 3.230769231em;
+        padding-top: 1.615384615em;
     }
 
     .widget .widget-title
@@ -4288,12 +4301,12 @@ p > video
 
     .widget blockquote
     {
-        margin-bottom: 1.3125em;
-        padding-left: 1.0625em;
-
         font-size: 16px;
         font-size: 1rem;
         line-height: 1.3125;
+
+        margin-bottom: 1.3125em;
+        padding-left: 1.0625em;
     }
 
     .widget blockquote cite,
@@ -4312,12 +4325,12 @@ p > video
 
     .widget pre
     {
-        margin-bottom: 1.6153846154em;
-        padding: .5384615385em;
-
         font-size: 13px;
         font-size: .8125rem;
         line-height: 1.6153846154;
+
+        margin-bottom: 1.6153846154em;
+        padding: .5384615385em;
     }
 
     .widget fieldset
@@ -4341,9 +4354,9 @@ p > video
     .widget input[type='reset'],
     .widget input[type='submit']
     {
-        padding: .846153846em;
-
         line-height: 1;
+
+        padding: .846153846em;
     }
 
     .widget input[type='date'],
@@ -4365,40 +4378,40 @@ p > video
 
     .widget h1
     {
-        margin-bottom: .9130434783em;
-
         font-size: 23px;
         font-size: 1.4375rem;
         line-height: 1.2173913043;
+
+        margin-bottom: .9130434783em;
     }
 
     .widget h2
     {
-        margin-bottom: 1.1052631579em;
-
         font-size: 19px;
         font-size: 1.1875rem;
         line-height: 1.1052631579;
+
+        margin-bottom: 1.1052631579em;
     }
 
     .widget h3
     {
-        margin-bottom: 1.3125em;
-
         font-size: 16px;
         font-size: 1rem;
         line-height: 1.3125;
+
+        margin-bottom: 1.3125em;
     }
 
     .widget h4,
     .widget h5,
     .widget h6
     {
-        margin-bottom: .9130434783em;
-
         font-size: 13px;
         font-size: .8125rem;
         line-height: 1.6153846154;
+
+        margin-bottom: .9130434783em;
     }
 
     .widget .alignleft
@@ -4419,9 +4432,9 @@ p > video
     .widget_calendar td,
     .widget_calendar th
     {
-        padding: 0;
-
         line-height: 2.6923076923;
+
+        padding: 0;
     }
 
     .widget_rss .rssSummary:last-child
@@ -4437,12 +4450,12 @@ p > video
 
     .widget .search-submit:before
     {
+        font-size: 16px;
+        line-height: 35px;
+
         left: 1px;
 
         width: 34px;
-
-        font-size: 16px;
-        line-height: 35px;
     }
 
     .widget button.search-submit
@@ -4611,15 +4624,6 @@ p > video
         margin-bottom: 7.0em;
     }
 
-    .entry-title
-    {
-        margin-bottom: 1.05em;
-
-        font-size: 40px;
-        font-size: 2.5rem;
-        line-height: 1.225;
-    }
-
     .format-aside .entry-title,
     .format-image .entry-title,
     .format-video .entry-title,
@@ -4630,11 +4634,11 @@ p > video
     .format-audio .entry-title,
     .format-chat .entry-title
     {
-        margin-bottom: 1.826086957em;
-
         font-size: 23px;
         font-size: 1.4375em;
         line-height: 1.304347826;
+
+        margin-bottom: 1.826086957em;
     }
 
     .post-thumbnail
@@ -4651,36 +4655,36 @@ p > video
     .entry-summary h1,
     .comment-content h1
     {
-        margin-top: 1.696969697em;
-        margin-bottom: .8484848485em;
-
         font-size: 33px;
         font-size: 2.0625rem;
         line-height: 1.2727272727;
+
+        margin-top: 1.696969697em;
+        margin-bottom: .8484848485em;
     }
 
     .entry-content h2,
     .entry-summary h2,
     .comment-content h2
     {
-        margin-top: 2em;
-        margin-bottom: 1em;
-
         font-size: 28px;
         font-size: 1.75rem;
         line-height: 1.25;
+
+        margin-top: 2em;
+        margin-bottom: 1em;
     }
 
     .entry-content h3,
     .entry-summary h3,
     .comment-content h3
     {
-        margin-top: 2.4347826087em;
-        margin-bottom: 1.2173913043em;
-
         font-size: 23px;
         font-size: 1.4375rem;
         line-height: 1.2173913043;
+
+        margin-top: 2.4347826087em;
+        margin-bottom: 1.2173913043em;
     }
 
     .entry-content h4,
@@ -4701,12 +4705,12 @@ p > video
     .comment-content h5,
     .comment-content h6
     {
-        margin-top: 2.9473684211em;
-        margin-bottom: 1.473684211em;
-
         font-size: 19px;
         font-size: 1.1875rem;
         line-height: 1.1052631579;
+
+        margin-top: 2.9473684211em;
+        margin-bottom: 1.473684211em;
     }
 
     .author-info
@@ -4842,11 +4846,11 @@ p > video
 {
     body:not(.home):not(.search-results) .entry-summary
     {
-        margin-bottom: 1.826086957em;
-
         font-size: 23px;
         font-size: 1.4375rem;
         line-height: 1.5217391304;
+
+        margin-bottom: 1.826086957em;
     }
 
     body:not(.home):not(.search-results) .entry-header + .entry-summary
@@ -4880,12 +4884,12 @@ p > video
 
     body:not(.home):not(.search-results) .entry-summary blockquote
     {
-        margin: 0 0 1.5217391304em;
-        padding-left: 1.347826087em;
-
         font-size: 23px;
         font-size: 1.4375rem;
         line-height: 1.5217391304;
+
+        margin: 0 0 1.5217391304em;
+        padding-left: 1.347826087em;
     }
 
     body:not(.home):not(.search-results) .entry-summary blockquote:not(.alignleft):not(.alignright)
@@ -4914,12 +4918,12 @@ p > video
 
     body:not(.home):not(.search-results) .entry-summary pre
     {
-        margin-bottom: 1.75em;
-        padding: 1.75em;
-
         font-size: 16px;
         font-size: 1rem;
         line-height: 1.75;
+
+        margin-bottom: 1.75em;
+        padding: 1.75em;
     }
 
     body:not(.home):not(.search-results) .entry-summary fieldset
@@ -5050,10 +5054,10 @@ p > video
 
     .entry-title
     {
-        margin-bottom: 1.696969697em;
-
         font-size: 24.75pt;
         line-height: 1.2727272727;
+
+        margin-bottom: 1.696969697em;
     }
 
     .format-aside .entry-title,
@@ -5066,10 +5070,10 @@ p > video
     .format-audio .entry-title,
     .format-chat .entry-title
     {
-        margin-bottom: 1.826086957em;
-
         font-size: 17.25pt;
         line-height: 1.304347826;
+
+        margin-bottom: 1.826086957em;
     }
 
     .entry-content h1,
